@@ -1,13 +1,20 @@
 import { View, StyleSheet, TouchableOpacity, Text, Image } from 'react-native';
 
+import { useAuthContext } from '../contexts/AuthContext';
+
 import Header from '../components/Header';
 
 export default function Login() {
+  const { login } = useAuthContext();
+
   return (
     <View style={styles.container}>
       <Header />
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={login}
+      >
         <View style={{ flexDirection: 'row' }}>
           <Text style={styles.subtitle}>Entrar pelo </Text>
           <Text style={{

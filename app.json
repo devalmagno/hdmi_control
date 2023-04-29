@@ -1,11 +1,15 @@
 {
   "expo": {
     "name": "hdmi_control",
-    "slug": "hdmi_control",
+    "slug": "hdmi-control",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "hdmi-control://",
     "userInterfaceStyle": "light",
+    "eas": {
+      "projectId": "34b9f84b-9c9d-4f6b-a35e-ca7c671ee428"
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -15,9 +19,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.devalmagno.hdmi_control"
     },
     "android": {
+      "package": "com.devalmagno.hdmi_control",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
