@@ -1,11 +1,23 @@
 import { View, StyleSheet, TouchableOpacity, Text, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { useAuthContext } from '../contexts/AuthContext';
 
 import Header from '../components/Header';
+import { useEffect } from 'react';
 
 export default function Login() {
-  const { login } = useAuthContext();
+  const { login, authUser } = useAuthContext();
+
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    if (authUser) navigation.navigate('Tela Inicial' as never);
+  }, [authUser]);
+
+  useEffect(() => {
+    if (authUser) navigation.navigate('Tela Inicial' as never);
+  }, []);
 
   return (
     <View style={styles.container}>
